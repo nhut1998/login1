@@ -1,0 +1,101 @@
+.sliders{
+    margin-top: 200px;
+    @include md{
+        margin-top: 0;
+    }
+    // Texts
+    .slider__text{
+        padding: 180px 0 0;
+        overflow: hidden;
+        &::before{
+            content: "";
+            background-size: cover;
+            position: absolute;
+            background-image: url("../img/code-watermark.svg");
+            width: 125px;
+            height: 115px;
+            top: 18%;
+            left: 0%;
+            z-index: -1;
+        }
+        position: relative;
+        .text__content{
+            h1{
+                @include text ($color-black-0, $fs-4, $fw-bold, $lsp-1);
+                overflow: hidden;
+            }
+            &:focus{
+                outline: none;
+            }
+            @include md{
+                text-align: center;
+            }
+        }
+        .slick-arrow{
+            top: 62%;
+            position: absolute;
+            cursor: pointer;
+            @include lg{
+                top: 70%;
+            }
+        }
+        .prevArrow{
+            left: 0;
+            z-index: 99;
+            @include md{
+                top: 100%;
+                left: 40%;
+            }
+        }
+        .nextArrow{
+            left: 10%;
+            @include md{
+                top: 100%;
+                left: 54%;
+            }
+        }
+        .slick-dots{
+            position: absolute;
+            text-align: left;
+            top: 68%;
+            @include lg{
+                top: 76%;
+            }
+            @include md{
+                top: 105%;
+                text-align: center;
+            }
+            li{
+                button{
+                border: 1px solid $color-gray-0;
+                border-radius: 50%;
+                width: 13px;
+                height: 13px;
+                &::before{
+                    content: "";
+                }
+                }
+            }
+            .slick-active{
+                button{
+                    background-color: $color-gray-0; 
+                }
+            }
+        }
+    }
+    
+    // Images
+    .slider__img{
+        .item{
+            margin-left: 1%;
+            img{
+                max-width: 100%;
+                height: auto;
+                margin: 0 auto;
+            }
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+}

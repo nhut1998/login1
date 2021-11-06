@@ -1,0 +1,40 @@
+.slick-dotted.slick-slider {
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+  
+  //--Begin space between item--
+  .slick-slide {
+    margin: 0 15px;
+    outline: none;
+  }
+  .slick-list {
+    margin: 0 -15px;
+  }
+  //--End space between item--
+
+  ul.slick-dots {
+    position: absolute;
+    bottom: 0;
+    li > button {
+      height: 8px;
+      width: 8px;
+      background-color: transparent;
+      border: 1px solid $color-default-darker;
+      opacity: 0.4;
+      will-change: opacity;
+      @include border-radius(50%);
+      @include transition(background-color 0.5s ease, opacity 0.5s ease);
+      &::before {
+        content: "";
+        color: transparent;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
+    li.slick-active > button {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.header{
+    width: 100%;
+    padding: 27px 0;
+    position: fixed;
+    z-index: 3;
+    .navbar__logo-brand{ 
+        @include md{
+            margin-left: 30px;
+        }
+        img{
+            width: 51px;
+            height: 51px;
+        }
+        .navbar-brand{
+            @include text ($color-black-0, $fs-2, $fw-bold, $lsp-2);
+            margin-right: 0;
+        }
+    }
+    .navbar-toggler{
+        box-shadow: 1px 1px 5px $color-box-shadow-gray;
+        margin-right: 30px;
+        &:focus{
+            outline: none;
+        }
+    }
+    .navbar-nav{
+        @include md{
+            margin-top: 25px;
+            background-color: $color-banner;
+        }
+        .nav-item{
+            .nav-link{
+                @include text ($color-black-0, $fs-0 - 1, $fw-normal, $lsp-0);
+                text-shadow: 0.5px 0.5px $color-box-shadow-gray;
+                text-align: center;
+                @include md{
+                    @include text ($color-black-0, $fs-0 - 1, $fw-normal, $lsp-0);
+                }
+                &:hover{
+                    @include text ($color-blue-0, $fs-0 - 1, $fw-normal, $lsp-0);
+                    @include md{
+                        @include text ($color-black-0, $fs-0 - 1, $fw-normal, $lsp-0);
+                    }
+                }
+                &.active{
+                    @include text ($color-blue-0, $fs-0 - 1, $fw-normal, $lsp-0);
+                    @include md{
+                        @include text ($color-black-0, $fs-0 - 1, $fw-normal, $lsp-0);
+                    }
+                }
+            }
+            &:last-child{
+                padding: 0 15px;
+                margin-left: 20px;
+                box-shadow: 0 5px 10px 0 $color-box-shadow-gray;
+                text-align: center;
+                border: 1px solid;
+                background-color: $color-white-0;
+                border-image-slice: 1;
+                border-image-source: linear-gradient(to bottom, #95c4fc, #788ddf);
+                @include md{
+                    width: 70%;
+                    margin: 0 auto; 
+                    border: none;
+                    background-color: transparent;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}

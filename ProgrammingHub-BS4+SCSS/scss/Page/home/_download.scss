@@ -1,0 +1,22 @@
+.download{
+    background: url("../img/city.svg") right no-repeat;
+    padding: 35px 0 100px;
+    .download__text{
+        h1{
+            margin-bottom: 15px;
+            @include text ($color-black-0, $fs-4, $fw-bold, $lsp-1);
+        }
+        a{
+            text-decoration: none;
+        }
+        @include md{
+            text-align: center;
+        }
+    }
+    .download__img{
+        padding-top: 60px;
+        img{
+            max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,115 @@
+.footer{
+    background: $color-black-1 url("../img/code-dark-watermark.svg") no-repeat left;
+    width: 100%;
+    height: 100%;
+    padding: 40px 0;
+
+    // Subscribe
+    .subscribe{
+        padding: 0;
+        width: 100%;
+        @include sm{
+            padding-left: 20px;
+        }
+        h1{
+            @include text ($color-white-0, $fs-2, $fw-bold, $lsp-1);
+            padding-bottom: 27px;
+        }
+        // Email input
+        .form-inline{
+            padding-bottom: 40px;
+            .form-control{
+                color: $color-white-0;
+                padding: 1.375rem .75rem;
+                width: 287px;
+                border: 1px solid $color-gray-1;
+                border-radius: 0;
+                background-color: transparent;
+                line-height: 1.15;
+                &:focus{
+                    background-color: transparent;
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+            .btn{
+                @include text ($color-white-0, $fs-1 + 1, $fw-bold-0, $lsp-3);
+                padding: 13px 38px;
+                margin-left: -2px;
+                border-radius: 2px;
+                background-image: linear-gradient(to bottom, $color-blue-1, $color-blue-0);
+                box-shadow: 0 5px 10px 0 $color-box-shadow-blue;
+                border: 0;
+            }
+        }
+        // Menu
+        .footer__menu{
+            width: 60%;
+            li{
+                list-style: none;
+                a{
+                    @include text ($color-white-0, $fs-1 + 1, $fw-bold-0, 0);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    // Follow Us
+    .followUs{
+        width: 100%;
+        padding: 0;
+        @include sm{
+            padding-right: 20px;
+        }
+        .lexino__link{
+            padding-bottom: 35px;
+            @include sm{
+                padding-top: 15px;
+            }
+            a{
+                @include text ($color-white-0, $fs-1 + 1, $fw-normal, 0);
+                opacity: 0.6;
+                text-decoration: none;
+            }
+        }
+        .followUs__socials{
+            color: $color-white-0;
+            p{
+                @include text ($color-white-0, $fs-0 + 1, $fw-normal, 0);
+                padding: 12.5px 25px;
+                margin: 0;
+                @include lg{
+                    padding: 12.5px 0;
+                }
+            }
+            .btn-footer{
+                border: 1px solid $color-white-0;
+                width: 50px;
+                height: 50px;
+                text-align: center; 
+                margin-left: 5px;
+                transition: all .5s;
+                i{
+                    line-height: 50px;
+                    color: $color-white-0;
+                }
+            }
+            .in{
+                &:hover{
+                    background-color: $color-blue-3;
+                }
+            }
+            .twitter{
+                &:hover{
+                    background-color: $color-blue-4;
+                }
+            }
+            .fb{
+                &:hover{
+                    background-color: $color-blue-5;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+.works {
+  padding-top: 94px;
+  background-color: $color-default-lightest;
+  &__title {
+    margin-bottom: 26px;
+  }
+  &__text {
+    @include font-size(18px);
+    width: 62%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+    line-height: 1.3;
+  }
+  ul.nav-pills {
+    @include flex();
+    justify-content: center;
+    margin-bottom: 38px;
+    li.nav-item {
+      margin: 0 8px;
+      a.nav-link {
+        @include font-size(14px);
+        font-weight: 700;
+        padding: 5px 18px;
+        color: $color-default-darkest;
+      }
+      &.active {
+        a {
+          @include transition();
+          &.nav-link,
+          &:focus,
+          &:hover {
+            background-color: $primary-green;
+            color: $color-default-lightest;
+          }
+        }
+      }
+    }
+  }
+  div.tab-content {
+    div.tab-pane__wrapper {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      div.tab-pane__item {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 285px;
+        @media #{$info-tablet-vertical} {
+          height: 185px;
+        }
+        @media #{$info-phone-4} {
+          height: 85px;
+        }
+        div.overlay {
+          cursor: pointer;
+          opacity: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          will-change: opacity;
+          @include flex();
+          align-items: center;
+          @include background-opacity($primary-green, 0.902);
+          @include transition();
+          > div {
+            text-align: center;
+            color: $color-default-lightest;
+            width: 100%;
+            > i.fa-eye {
+              padding: 12px;
+              @include border-radius(50%);
+              border: 1px solid $color-default-lightest;
+              @include flip();
+              margin-bottom: 26px;
+            }
+            > h2 {
+              @include font-size(20px);
+              font-weight: 600;
+              margin-bottom: 5px;
+              @media #{$info-tablet-vertical} {
+                @include font-size(18px);
+              }
+              @media #{$info-phone-4} {
+                @include font-size(14px);
+              }
+            }
+            > span {
+              @include font-size(16px);
+              font-weight: 300;
+              @media #{$info-tablet-vertical} {
+                @include font-size(14px);
+              }
+              @media #{$info-phone-4} {
+                @include font-size(12px);
+              }
+            }
+          }
+        }
+        &:hover > div.overlay {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

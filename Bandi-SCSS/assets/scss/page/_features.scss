@@ -1,0 +1,40 @@
+.features {
+  background-color: #f4f7f9;
+  padding: 70px 0;
+  &__title {
+    margin-bottom: 70px;
+  }
+  &__items {
+    padding-bottom: 70px;
+    .features__item {
+      @include flex();
+      > div.item__icon {
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 19px;
+        height: 38px;
+        margin: 0 15px;
+        @include border-radius(50%);
+        border: 1px solid $primary-green;
+      }
+      > div.item__content {
+        > h2 {
+          @include font-size(20px);
+          font-weight: 600;
+          margin-bottom: 21px;
+        }
+        > p {
+          @include font-size(13px);
+          color: $very-dark-grayish-blue;
+          line-height: 1.6;
+        }
+      }
+    }
+    ul.slick-dots {
+      li > button:hover,
+      li.slick-active > button {
+        background-color: $color-default-darkest;
+      }
+    }
+  }
+}

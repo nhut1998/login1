@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags --> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="d-flex justify-content-center mt-3 mb-3">QUẢN LÝ NHÂN VIÊN</h1>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg mb-3" id="them-nhan-vien-moi">
+            Thêm Nhân Viên Mới
+        </button>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Họ & Tên</th>
+                    <th>Ngày Sinh</th>
+                    <th>Vị Trí</th>
+                    <th>Mức Lương</th>
+                    <th>Cài Đặt</th>
+                </tr>
+            </thead>
+            <tbody id="danh-sach-nhan-vien"></tbody>
+        </table>
+        <!-- Modal -->
+        <div class="modal fade" id="them-nhan-vien-modal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Thêm Nhân Viên</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- b4-form-input -->
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="maNhanVien" placeholder="ID">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="hoTenNhanVien" placeholder="Họ & Tên">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="ngaySinhNhanVien" placeholder="DD/MM/YYYY" autocomplete="off">
+                        </div>
+                        <!-- b4-form-select -->
+                        <div class="form-group">
+                            <select class="form-control" id="viTriNhanVien">
+                                <option>Vị Trí</option>
+                                <option>Project manager</option>
+                                <option>Technical leader</option>
+                                <option>Frontend developer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="luongNhanVien" placeholder="Lương">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Huỷ</button>
+                        <button type="button" class="btn btn-success" onclick="themNhanVienMoi()">Thực Hiện Thêm
+                            Mới</button>
+                        <button type="button" class="btn btn-primary" onclick="capNhatNhanVien()">Cập Nhật</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Jquery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script src="./main.js"></script>
+
+</body>
+
+</html>

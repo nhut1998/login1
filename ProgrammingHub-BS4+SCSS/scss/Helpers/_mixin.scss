@@ -1,0 +1,41 @@
+@mixin text($color, $fs, $fw, $lsp){
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+    letter-spacing: $lsp;
+}
+
+ // Extra small devices
+@mixin xs {
+    @media (max-width: #{$screen-xs}) {
+        @content;
+    }
+ }
+
+// Small devices
+@mixin sm {
+    @media (max-width: #{$screen-sm}) {
+        @content;
+    }
+ }
+ 
+ // Medium devices
+ @mixin md {
+    @media (max-width: #{$screen-md}) {
+        @content;
+    }
+ }
+ 
+ // Large devices
+ @mixin lg {
+    @media (max-width: #{$screen-lg}) {
+        @content;
+    }
+ }
+ 
+ // Extra large devices
+ @mixin xl {
+    @media (max-width: #{$screen-xl}) {
+        @content;
+    }
+ }

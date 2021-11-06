@@ -1,0 +1,16 @@
+@import "Base/reset";
+
+@import "Helpers/variable";
+@import "Helpers/mixin";
+@import "Helpers/extend";
+@import "Helpers/animation";
+
+@import "Layout/header";
+@import "Layout/footer";
+
+@import "Page/home/cover";
+@import "Page/home/intro";
+@import "Page/home/sliderSyncing";
+@import "Page/home/recognized";
+@import "Page/home/centerMode";
+@import "Page/home/download";

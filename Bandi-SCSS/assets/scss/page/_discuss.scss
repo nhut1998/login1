@@ -1,0 +1,131 @@
+.discuss {
+  padding: 100px 0;
+  &__title {
+    margin-bottom: 26px;
+  }
+  &__text {
+    @include font-size(18px);
+    width: 62%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 80px;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 30px;
+    div.content__contact {
+      grid-column: 1 / span 3;
+      @media #{$info-tablet-horizontal} {
+        grid-column: 1 / span 4;
+      }
+      > h2 {
+        @include font-size(20px);
+        margin-bottom: 36px;
+        line-height: 1.5;
+      }
+      > p {
+        @include font-size(13px);
+        color: $very-dark-grayish-blue;
+        line-height: 1.7;
+        display: inline-block;
+        inline-size: 164px;
+        > a {
+          color: $very-dark-grayish-blue;
+        }
+      }
+    }
+    div.content__form {
+      grid-column: 4 / span 8;
+      @media #{$info-tablet-horizontal} {
+        grid-column: 5 / span 8;
+      }
+      > h2 {
+        @include font-size(24px);
+        font-weight: 700;
+        margin-bottom: 40px;
+      }
+      > form {
+        width: 100%;
+        > input.form__input {
+          width: 100%;
+          margin-bottom: 36px;
+          border: none;
+          border-bottom: 1px solid $color-default-darker;
+          padding-bottom: 15px;
+          @include placeholder {
+            @include font-size(13px);
+            color: $color-default-darker;
+          }
+          &#discuss-name,
+          &#discuss-email {
+            width: 48%;
+            margin-bottom: 40px;
+            @media #{$info-tablet-horizontal} {
+              width: 100%;
+            }
+          }
+          &#discuss-name {
+            margin-right: 4%;
+            float: left;
+            @media #{$info-tablet-horizontal} {
+              float: none;
+            }
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+        > button.form__submit {
+          @include font-size(14px);
+          float: right;
+          background-color: transparent;
+          margin-right: -20px;
+          @include opacity(1);
+          will-change: opacity;
+          > img {
+            margin-right: 8px;
+          }
+          &:hover {
+            @include opacity(.8);
+          }
+        }
+        &::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+      }
+    }
+    div.content__social {
+      grid-column: 12 / span 1;
+      @media #{$info-tablet-horizontal} {
+        @include flex();
+        justify-content: space-between;
+        width: 75%;
+        margin: 0 auto;
+        grid-row: 2 / span 1;
+        grid-column: 1 / span 12;
+      }
+      > a {
+        color: #ccd1d5;
+        display: block;
+        margin-top: 18px;
+        > i {
+          color: $very-dark-blue;
+          @include font-size(22px);
+        }
+        > i, img {
+          @include opacity(0.2);
+          @include transition();
+          will-change: opacity;
+          &:hover {
+            @include opacity(1);
+          }
+        }
+      }
+    }
+  }
+}

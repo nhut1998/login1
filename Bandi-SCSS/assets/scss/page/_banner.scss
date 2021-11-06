@@ -1,0 +1,124 @@
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  .slide {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    @include background-size(cover);
+    background-position: center;
+    background-repeat: no-repeat;
+    &__text {
+      position: absolute;
+      top: 56vh;
+      width: 100%;
+      text-align: center;
+      color: $color-default-lightest;
+      @media #{$info-tablet-horizontal} {
+        @include vertical-align();
+      }
+      > h1 {
+        font-weight: 300;
+        line-height: 0.95;
+        @include font-size(62px);
+        > span {
+          font-weight: 700;
+        }
+      }
+      > h2 {
+        font-weight: 300;
+        line-height: 1.9;
+        @include font-size(48px);
+        span {
+          color: $primary-green;
+        }
+      }
+      > p {
+        font-weight: 300;
+        @include font-size(18px);
+        position: relative;
+        display: inline-block;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: -61px;
+          display: block;
+          height: 1.6px;
+          width: 28px;
+          background-color: $primary-green;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: -61px;
+          display: block;
+          height: 1.6px;
+          width: 28px;
+          background-color: $primary-green;
+        }
+      }
+    }
+  }
+  ul.slick-dots {
+    @include vertical-align(absolute);
+    left: calc(100% - 48px);
+    height: 80px;
+    width: auto;
+    @include flex();
+    flex-direction: column;
+    justify-content: space-between;
+    @media #{$info-tablet-horizontal} {
+      top: 90vh;
+      left: 50%;
+      width: 54px;
+      height: auto;
+      flex-direction: row;
+      @include transform(translateX(-50%));
+    }
+    li > button:hover, li.slick-active > button {
+      background-color: $color-default;
+    }
+  }
+  div.social {
+    position: absolute;
+    width: 113px;
+    left: 50%;
+    top: 91vh;
+    z-index: 6;
+    @include transform(translateX(-50%));
+    list-style: none;
+    @include flex();
+    justify-content: space-between;
+    align-items: center;
+    @media #{$info-tablet-horizontal} {
+      top: 80vh;
+    }
+    > a {
+      color: $color-default-lightest;
+      opacity: 0.3;
+      @include transition(opacity 0.5s ease);
+      will-change: opacity;
+      &:hover {
+        opacity: 1;
+      }
+      > i {
+        @include font-size(19px);
+      }
+      > img {
+        width: 19px;
+        @media #{$info-tablet-horizontal} {
+          width: 18px;
+        }
+        @media #{$info-tablet-vertical} {
+          width: 17px;
+        }
+        @media #{$info-phone} {
+          width: 16px;
+        }
+      }
+    }
+  }
+}

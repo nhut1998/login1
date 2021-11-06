@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.title {
+  color: #EAD7D7;
+  font-size: 130px;
+  font-weight: 350;
+  text-align: center;
+}
+
+#input-todo {
+  font-size: 30px;
+  font-style: italic;
+  opacity: 0.2;
+  margin-left: 380px;
+  padding: 15px 50px;
+}
+
+.adjustPlace {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 380px;
+  max-width: 445px;
+  font-size: 50px;
+  border: 1px solid #ccc;
+}
+
+#checkbox {
+  margin: 0 20px;
+  width: 40px;
+  height: 40px;
+}
+
+.btn-danger {
+  background-color: red;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer
+}
+
+.todoComplete {
+  text-decoration: line-through ;
+  opacity: 0.3;
+  transition: all 0.5s;
+}
+
+.textInput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dfdfdf;
+}
+
+.marginBtns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.opacityBtn {
+  opacity: 0.2;
+}

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <!-- bài tập 1 -->
+
+    <div class="container">
+      <h1 style="text-align: center;">Tính tiền lương nhân viên</h1>
+      <form>
+          <div class="form-group">
+            <label for="soNgayLam">Nhập số ngày làm việc</label>
+            <input type="text" class="form-control" id="soNgayLam" placeholder="Số ngày làm">
+          </div>
+          <button id="btn-calc-salary" type="submit" class="btn btn-primary">Tính tiền lương</button>
+      </form>
+    
+          <div>
+            <div class="style" id="hien-thi-luong-bang-so">
+            </div> 
+          </div>
+          <div>
+            <div class="style" id="hien-thi-luong-bang-chu">
+            </div> 
+          </div>
+    </div>
+
+    <!-- bài tập 2 -->
+
+    <div class="container">
+      <h1 style="text-align: center;">Tính giá trị trung bình</h1>
+      <form>
+          <div class="form-group">
+            <label for="giaTriThuNhat">Nhập giá trị thứ nhất</label>
+            <input type="text" class="form-control" id="giaTriThuNhat" placeholder="Giá trị thứ nhất">
+          </div>
+          <div class="form-group">
+            <label for="giaTriThuHai">Nhập giá trị thứ hai</label>
+            <input type="text" class="form-control" id="giaTriThuHai" placeholder="Giá trị thứ hai">
+          </div>
+          <div class="form-group">
+            <label for="giaTriThuBa">Nhập giá trị thứ ba</label>
+            <input type="text" class="form-control" id="giaTriThuBa" placeholder="Giá trị thứ ba">
+          </div>
+          <div class="form-group">
+            <label for="giaTriThuTu">Nhập giá trị thứ tư</label>
+            <input type="text" class="form-control" id="giaTriThuTu" placeholder="Giá trị thứ tư">
+          </div>
+          <div class="form-group">
+            <label for="giaTriThuNam">Nhập giá trị thứ năm</label>
+            <input type="text" class="form-control" id="giaTriThuNam" placeholder="Giá trị thứ năm">
+          </div>
+          <button id="btn-calc-medium" type="submit" class="btn btn-primary">Gía trị trung bình</button>
+      </form>
+    
+          <div>
+            <div class="style" id="hien-thi-gia-tri-trung-binh">
+            </div> 
+          </div>
+    </div>
+
+    <!-- bài tập 3 -->
+      
+    <div class="container">
+      <h1 style="text-align: center;">Quy đổi tiền ( USD => VND )</h1>
+      <form>
+        <div class="form-group">
+          <label for="soUSD">Nhập số USD muốn quy đổi</label>
+          <input type="text" class="form-control" id="soUSD" placeholder="USD">
+        </div>
+        <button id="btn-calc-changemoney" type="submit" class="btn btn-primary">Quy đổi</button>
+      </form>
+
+        <div>
+          <div class="style" id="hien-thi-so-tien">
+        </div> 
+    </div>
+
+    <!-- bài tập 4 -->
+
+    <div class="container">
+      <h1 style="text-align: center;">Tính chu vi ,diện tích hình chữ nhật</h1>
+      <form>
+        <div class="form-group">
+          <label for="chieuDai">Nhập chiều dài hình chữ nhật</label>
+          <input type="text" class="form-control" id="chieuDai" placeholder="Chiều dài">
+        </div>
+        <div class="form-group">
+          <label for="chieuRong">Nhập chiều rộng hình chữ nhật</label>
+          <input type="text" class="form-control" id="chieuRong" placeholder="Chiều rộng">
+        </div>
+        <button id="btn-calc-cv" type="submit" class="btn btn-primary">Kết quả</button>
+      </form>
+        <div>
+          <div class="style" id="hien-thi-ket-qua-chu-vi">
+        </div> 
+        <div>
+          <div class="style" id="hien-thi-ket-qua-dien-tich">
+        </div> 
+    </div>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="./luan.js"></script>
+  </body>
+</html>

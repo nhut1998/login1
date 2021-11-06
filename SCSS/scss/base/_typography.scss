@@ -1,0 +1,14 @@
+html, body {
+  font-size: $fs-default;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  @media #{$info-tablet-horizontal} {
+    font-size: $fs-default - 5;
+  }
+  @media #{$info-tablet-vertical} {
+    font-size: $fs-default - 10;
+  }
+  @media #{$info-phone} {
+    font-size: $fs-default - 15;
+  }
+}

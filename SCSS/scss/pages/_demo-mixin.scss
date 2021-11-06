@@ -1,0 +1,23 @@
+section.demo-mixin {
+  // arguments là giá trị truyền vào dấu () lúc gọi function
+  // @include middle-element();
+  @include middle-var;
+
+  h1 {
+    color: red;
+    font-weight: bold;
+  }
+
+  h2 {
+    @extend h1;
+    font-size: half-divide(50px);
+  }
+
+  .thien-khong-lo {
+    transform: rotate(90deg);
+
+    .haro {
+      @extend h2;
+    }
+  }
+}

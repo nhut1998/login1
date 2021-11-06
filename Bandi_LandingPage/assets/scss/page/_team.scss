@@ -1,0 +1,123 @@
+.team {
+  padding-top: 100px;
+  padding-bottom: 130px;
+  &__title {
+    margin-bottom: 26px;
+  }
+  &__text {
+    @include font-size(18px);
+    width: 62%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 100px;
+  }
+  &__items {
+    padding-bottom: 100px;
+    div.team__item {
+      cursor: pointer;
+      overflow: hidden;
+      &:hover {
+        > div.item__avatar div.overlay {
+          @include transform(translateY(0));
+        }
+        > div.item__text > h2 {
+          color: $primary-green;
+        }
+      }
+      > div.item__avatar {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 292px;
+        div.overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          @include flex();
+          flex-direction: column;
+          justify-content: space-between;
+          @include background-opacity($primary-green, 0.902);
+          @include transition();
+          padding: 20px 30px;
+          @include transform(translateY(100%));
+          &__text {
+            text-align: center;
+            color: $color-default-lightest;
+            width: 100%;
+            > h6 {
+              @include font-size(14px);
+              line-height: 1.6;
+              font-weight: 600;
+              margin-bottom: 3px;
+              margin-top: 0;
+            }
+            > span {
+              @include font-size(14px);
+              line-height: 1.6;
+              font-weight: 300;
+            }
+          }
+          &__social {
+            @include flex();
+            justify-content: space-between;
+            width: 130px;
+            margin: 0 auto;
+            text-align: center;
+            > a {
+              @include background-opacity($color-default-darkest, 0.3);
+              color: $color-default-lightest;
+              display: inline-block;
+              width: 37px;
+              height: 37px;
+              i, img {
+                @include transition();
+                will-change: opacity;
+                &:hover {
+                  opacity: 0.3;
+                }
+              }
+              > i {
+                line-height: 37px;
+                font-size: 18px;
+              }
+              > img {
+                width: 100%;
+                padding: 8px;
+              }
+            }
+          }
+        }
+      }
+      div.item__text {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        padding: 20px;
+        background-color: $color-default-lightest;
+        > h2 {
+          @include font-size(18px);
+          color: $color-default-darkest;
+          font-weight: 600;
+          line-height: 1.5;
+          @include transition();
+        }
+        > span {
+          @include font-size(13px);
+          color: $very-dark-grayish-blue;
+        }
+      }
+    }
+    ul.slick-dots {
+      li > button:hover,
+      li.slick-active > button {
+        background-color: $color-default-darkest;
+      }
+    }
+  }
+}

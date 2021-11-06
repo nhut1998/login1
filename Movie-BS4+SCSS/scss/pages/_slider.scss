@@ -1,0 +1,106 @@
+section.slider {
+  .carousel {
+    .carousel-indicators-wrapper {
+      position: relative;
+
+      .carousel-indicators {
+        margin-left: 30px;
+        bottom: 60px;
+        right: unset;
+
+        @include md {
+          margin-left: 15px;
+        }
+
+        li {
+          width: 6px;
+          height: 6px;
+          background-color: #000;
+          border: 2px solid #fff;
+          margin-right: 8px;
+          border-radius: 50%;
+          opacity: unset;
+          
+          &.active {
+            background-color: #fff;
+          }
+        }
+      }
+    }
+
+    .carousel-inner .carousel-item {
+      height: 94vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      position: relative;
+  
+      &::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+  
+      .carousel-item-inner {
+        color: #fff;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+
+        span.age-label {
+          border-radius: 50%;
+          border: 2px solid #fff;
+          display: block;
+          width: 44px;
+          text-align: center;
+          line-height: 40px;
+          margin-right: 15px;
+        }
+  
+        button.btn-play-trailer {
+          border: 0;
+          color: #fff;
+          letter-spacing: 4px;
+          background-color: $color-orange-2;
+          text-transform: uppercase;
+          border-radius: 50px;
+          padding: 12px 24px;
+          position: relative;
+          font-size: 13px;
+          overflow: hidden;
+
+          & > span {
+            z-index: 2;
+            position: relative;
+          }
+          
+          &::before {
+            content: "";
+            display: block;
+            width: 110%;
+            height: 100%;
+            will-change: transform;
+            transition: transform .5s;
+            transform: skewX(30deg) translateX(0);
+            background-image: linear-gradient(to right, $color-orange-1, $color-orange-2);
+            position: absolute;
+            left: -5%;
+            top: 0;
+          }
+          
+          &:hover::before {
+            transform: skewX(30deg) translateX(105%);
+          }
+        }
+      }
+    }
+  }
+}

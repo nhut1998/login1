@@ -1,0 +1,12 @@
+img {
+  background-size: cover;
+}
+
+.avatar {
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+table.table td, table.table th {
+  vertical-align: middle;
+}

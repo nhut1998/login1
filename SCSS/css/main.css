@@ -1,0 +1,52 @@
+html, body {
+  font-size: 30px;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media only screen and (max-width: 1160px) {
+  html, body {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  html, body {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  html, body {
+    font-size: 15px;
+  }
+}
+
+section.demo-mixin {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.demo-mixin h1, section.demo-mixin h2, section.demo-mixin .thien-khong-lo .haro, section.demo-mixin section.duck h6 .haro, section.duck section.demo-mixin h6 .haro {
+  color: red;
+  font-weight: bold;
+}
+
+section.demo-mixin h2, section.demo-mixin .thien-khong-lo .haro, section.demo-mixin section.duck h6 .haro, section.duck section.demo-mixin h6 .haro {
+  font-size: 25px;
+}
+
+section.demo-mixin .thien-khong-lo, section.demo-mixin section.duck h6, section.duck section.demo-mixin h6 {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+/*# sourceMappingURL=main.css.map */

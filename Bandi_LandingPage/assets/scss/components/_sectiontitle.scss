@@ -1,0 +1,32 @@
+.section-title {
+  text-align: center;
+  > h2 {
+    @include font-size(28px);
+    color: $primary-green;
+    font-weight: 800;
+    margin-bottom: 22px;
+    letter-spacing: -0.02em;
+  }
+  > div.line {
+    position: relative;
+    width: 230px;
+    margin: 0 auto;
+    &::before,
+    &::after {
+      content: "";
+      @include vertical-align(absolute);
+      width: 100px;
+      height: 1px;
+      background-color: $color-default-lighter;
+    }
+    &::before {
+      right: -10px;
+    }
+    &::after {
+      left: -10px;
+    }
+    > img {
+      width: 19px;
+    }
+  }
+}

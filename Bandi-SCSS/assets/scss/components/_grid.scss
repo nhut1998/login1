@@ -1,0 +1,11 @@
+.wrapper {
+  width: 75%;
+  padding: 0 15px;
+  margin: 0 auto;
+  @media #{$info-tablet-horizontal} {
+    width: 85%;
+  }
+  @media #{$info-tablet-vertical} {
+    width: 95%;
+  }
+}

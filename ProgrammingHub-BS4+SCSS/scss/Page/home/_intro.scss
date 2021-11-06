@@ -1,0 +1,36 @@
+.intro{
+    margin-top: 200px;
+    .intro__img{
+        img{
+            max-width: 100%;
+        }
+    }
+    .intro__text{
+        padding-left: 95px;
+        @include md{
+            padding-left: 0;
+            text-align: center;
+        }
+        &::before{
+            content: "";
+            background-size: cover;
+            position: absolute;
+            background-image: url("../img/code-watermark.svg");
+            width: 125px;
+            height: 115px;
+            top: 0;
+            left: 17%;
+            z-index: -1;
+        }
+        h1{
+            @include text ($color-black-0, $fs-4, $fw-bold, $lsp-2);
+            margin: 70px 0 25px;
+        }
+        a{
+            @include text ($color-blue-0, $fs-1 + 1, $fw-normal, $lsp-3);
+            border: 1px solid $color-blue-2;
+            padding: 12px 20px; 
+            border-radius: $border-radius-1;
+        }
+    }
+}

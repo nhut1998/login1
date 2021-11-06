@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>JavaScript</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Main CSS: Cascading Style Sheet -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="./js/tatMoDen.css">
+</head>
+
+<body>
+  <!-- <div class="container">
+    <h1 class="text-center">Login</h1>
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+      </div>
+      <button id="btn-submit" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div> -->
+
+  <!-- <div class="container">
+    <h1>Tính điểm thi môn thầy Đán</h1>
+    <form>
+      <div class="form-group">
+        <label for="tyLe">Tỷ lệ</label>
+        <input type="text" class="form-control" id="tyLe" placeholder="Nhập tỷ lệ (40/60)">
+      </div>
+      <div class="form-group">
+        <label for="diemChuyenCan">Điểm chuyên cần</label>
+        <input type="text" class="form-control" id="diemChuyenCan" placeholder="Nhập điểm chuyên cần">
+      </div>
+      <div class="form-group">
+        <label for="diemThiGiuaKy">Điểm thi giữa kỳ</label>
+        <input type="text" class="form-control" id="diemThiGiuaKy" placeholder="Nhập điểm thi giữa kỳ">
+      </div>
+      <div class="form-group">
+        <label for="diemThiCuoiKy">Điểm thi cuối kỳ</label>
+        <input type="text" class="form-control" id="diemThiCuoiKy" placeholder="Nhập điểm thi cuối kỳ">
+      </div>
+      <button id="btn-calc-score" type="submit" class="btn btn-primary">Tính điểm</button>
+    </form>
+    <div class="mt-2" id="hien-thi-he-10"></div>
+    <div class="mt-2" id="hien-thi-he-chu"></div>
+  </div> -->
+
+  <!-- <div class="container">
+    <h1>Bài tập 5</h1>
+    <input name="haro" onchange="calcSum(event)" type="text" class="form-control" id="number-input">
+    <div id="display-result"></div>
+  </div> -->
+
+  <div class="container">
+    <h1>Tắt mở đèn</h1>
+    <button onclick="tatDen()" class="btn btn-danger">Tắt đèn</button>
+    <img id="light1" src="img/pic_bulboff.gif" alt="light">
+    <button onclick="moDen()" class="btn btn-success">Bật đèn</button>
+
+    <button onclick="toggle('pic_bulboff.gif')" class="btn btn-danger">Tắt đèn</button>
+    <img id="light2" src="img/pic_bulboff.gif" alt="light">
+    <button onclick="toggle('pic_bulbon.gif')" class="btn btn-success">Bật đèn</button>
+
+    <img id="light3" src="img/pic_bulboff.gif" alt="light">
+    <button onclick="toggle1()" class="btn btn-success">Công tắc</button>
+
+    <img id="light4" src="img/pic_bulboff.gif" alt="light">
+    <button onclick="toggle2(event)" class="btn btn-success">Công tắc</button>
+
+    <input id="tim-vi-tri" type="text" onkeyup="timViTri(event)">
+    <div id='tim-duoc'></div>
+    <div id="hien-thi"></div>
+    <table class="table" id="bang-hien-thi"></table>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!-- Main JS -->
+  <!-- <script src="js/main.js"></script> -->
+  <!-- <script src="js/tinhDiem.js"></script> -->
+  <!-- <script src="js/bt5.js"></script> -->
+  <!-- <script src="js/tatMoDen.js"></script> -->
+<<<<<<< HEAD
+  <script src="js/dataType.js"></script>
+  <script src="./js/tatMoDen.js"></script>
+=======
+  <script src="js/dataTypeAndArray.js"></script>
+>>>>>>> b0421091fcb4933113cf14f6d8bd8c73a60045d7
+
+  <!-- Homework -->
+  <script src="js/homework/duc.js"></script>
+  <script src="js/homework/hieu.js"></script>
+  <script src="js/homework/luan.js"></script>
+  <script src="js/homework/nhut.js"></script>
+  <script src="js/homework/thien.js"></script>
+</body>
+
+</html>

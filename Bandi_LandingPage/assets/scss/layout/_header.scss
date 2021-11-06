@@ -1,0 +1,79 @@
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  @include background-opacity(#101636, 0.2);
+  z-index: 10;
+  nav {
+    @include flex();
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    div.nav-logo {
+      @include flex();
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
+      > a {
+        @include font-size(28px);
+        font-family: "Pacifico", cursive;
+        color: $color-default-lightest;
+        margin-right: 30px;
+      }
+      > span {
+        @include font-size(16px);
+        font-family: "Open Sans", sans-serif;
+        color: $color-default-lightest;
+        border-left: 1.6px solid $primary-green;
+        padding-left: 20px;
+        opacity: 0.3;
+      }
+    }
+    ul.menu {
+      list-style: none;
+      @include flex();
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
+      @media #{$info-phone} {
+        display: none;
+      }
+      > li {
+        position: relative;
+        margin-right: 35px;
+        padding: 0 4px;
+        &.active::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: -24px;
+          width: 100%;
+          height: 2px;
+          background-color: #32b0ee;
+        }
+        > a {
+          color: $color-default-lightest;
+          @include font-size(13px);
+        }
+      }
+      > li:last-child {
+        margin-right: 0;
+      }
+    }
+    .toggle {
+      background-color: transparent;
+      display: none;
+      padding: 0 15px;
+      @media #{$info-phone} {
+        display: block;
+      }
+      &:focus {
+        outline: none;
+      }
+      &__icon {
+        color: $color-default-lightest;
+      }
+    }
+  }
+}

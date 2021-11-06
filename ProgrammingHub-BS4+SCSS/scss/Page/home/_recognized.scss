@@ -1,0 +1,44 @@
+.recognized{
+    padding: 85px 0 110px;
+    text-align: center;
+    width: 100%;
+    .recognized__content{
+        margin-left: calc(100%/6);
+        h1{
+            @include text ($color-black-0, $fs-4, $fw-bold, $lsp-1);
+        }
+        .recognized__box{
+            width: 100%;
+            margin-top: 60px;
+            padding: 45px 0;
+            border-radius: 4px;
+            background-color: $color-white-0;
+            border: solid 1px $color-white-1;
+            box-shadow: 0 20px 30px 0 $color-box-shadow-gray;
+            .img1{
+                img{
+                    max-width: 75%;
+                    @include sm{
+                        width: 65%;
+                    }
+                }
+            }
+            .img2{
+                @include sm{
+                    text-align: left;
+                    margin-left: 16%;
+                }
+                img{
+                    max-width: 55%;
+                    @include sm{
+                        margin-top: 30px;
+                        width: 45%;
+                    }
+                }
+            }
+        }
+        @include md{
+            margin-left: 0;
+        }
+    }
+}

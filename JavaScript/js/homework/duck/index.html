@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href=".//style.css">
+</head>
+
+<body>
+  <!-- Bài tập 1 -->
+  <!-- <div class="container">
+    <div>
+      <h1 class="title">Tính tiền lương nhân viên</h1>
+      <h3>Lương 1 ngày: 100.000vnđ</h3>
+      <form>
+        <div class="form-group">
+          <label for="soNgayLam">Nhập số ngày làm việc</label>
+          <input type="number" class="form-control" id="soNgayLam" placeholder="Số ngày làm">
+        </div>
+        <button id="btn-calc-salary" type="submit" class="btn btn-primary">Tính tiền lương</button>
+      </form>
+        <div class="style" id="hien-thi-luong-bang-so"></div>
+    </div>
+
+    <br> -->
+
+    <!-- Bài tập 2 -->
+    <!-- <div>
+      <h1 class="title">Tính giá trị trung bình</h1>
+      <form>
+        <div class="form-group">
+          <label for="soThuNhat">Nhập số thứ nhất</label>
+          <input type="number" class="form-control" id="soThuNhat" placeholder="Number 1">
+        </div>
+        <div class="form-group">
+          <label for="soThuHai">Nhập số thứ hai</label>
+          <input type="number" class="form-control" id="soThuHai" placeholder="Number 2">
+        </div>
+        <div class="form-group">
+          <label for="soThuBa">Nhập số thứ ba</label>
+          <input type="number" class="form-control" id="soThuBa" placeholder="Number 3">
+        </div>
+        <div class="form-group">
+          <label for="soThuTu">Nhập số thứ tư</label>
+          <input type="number" class="form-control" id="soThuTu" placeholder="Number 4">
+        </div>
+        <div class="form-group">
+          <label for="soThuNam">Nhập số thứ năm</label>
+          <input type="number" class="form-control" id="soThuNam" placeholder="Number 5">
+        </div>
+        <button id="btn-calc-average" type="submit" class="btn btn-primary">Tính</button>
+      </form>
+      <div class="style" id="hien-thi-average"></div>
+    </div> -->
+
+    <!-- Bài tập 3 -->
+    <!-- <div>
+      <h1 class="title">Quy đổi tiền</h1>
+      <h3>1 USD = 23.500vnđ</h3>
+      <form>
+        <div class="form-group">
+          <label for="USD">Nhập USD mà bạn muốn quy đổi</label>
+          <input type="number" class="form-control" id="USD" placeholder="Đơn vị: USD">
+        </div>
+        <button id="btn-calc-usd-vnd" type="submit" class="btn btn-primary">Tính</button>
+      </form>
+      <div class="style" id="hien-thi-vnd"></div>
+    </div> -->
+
+    <!-- Bài tập 4 -->
+    <!-- <div>
+      <h1 class="title">Tính diện tích, chu vi hình chữ nhật</h1>
+      <form>
+        <div class="form-group">
+          <label for="chieuDai">Nhập Chiều Dài</label>
+          <input type="number" class="form-control" id="chieuDai" placeholder="Đơn vị: Centimet">
+        </div>
+        <div class="form-group">
+          <label for="chieuRong">Nhập Chiều Rộng</label>
+          <input type="number" class="form-control" id="chieuRong" placeholder="Đơn vị: Centimet">
+        </div>
+        <button id="btn-calc-dt-cv" type="submit" class="btn btn-primary">Tính</button>
+      </form>
+      <div class="style" id="hien-thi-dien-tich"></div>
+      <div class="style" id="hien-thi-chu-vi"></div>
+    </div> -->
+
+    <!-- Bài tập 5 -->
+    <!-- <div>
+      <h1 class="title">Tính tổng 2 ký tự số</h1>
+      <form>
+        <div class="form-group">
+          <label for="soHaiChuSo">Nhập số</label>
+          <input name="duck" onchange="calcSum(event)" type="text" class="form-control" id="soHaiChuSo" placeholder="Số có 2 chữ số">
+        </div>
+      </form>
+      <div class="style" id="kq"></div>
+    </div>
+  </div> -->
+
+  <!-- bóng đèn -->
+  <div class="container">
+    <button onclick="bat()" class="btn bg-light">Mở đèn</button>
+    <img id="light" src="./pic_bulbon.gif" alt="">
+    <button onclick="tat()" class="btn bg-light">Tắt đèn</button>
+
+    <button onclick=""></button>
+  </div>
+
+
+<div class="container">
+  <input type="text" onchange="timViTri(event)">
+  <div id="tim-duoc"></div>
+
+  <!-- <div id="bang-hien-thi"></div> -->
+
+  <div id="hien-thi"></div>
+  <table class="table" id="bang-hien-thi"></table>
+</div>
+
+
+
+
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <!-- Add tinhTienLuongNhanVien.js -->
+  <script src="./baitap.js"></script>
+</body>
+
+</html>

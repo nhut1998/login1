@@ -1,0 +1,146 @@
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+
+  .top-header {
+    color: #fff;
+
+    span {
+      display: inline-block;
+      padding-right: 20px;
+      border-right: 1px dotted #fff;
+    }
+
+    .fa-phone {
+      margin-right: 20px;
+    }
+
+    .fa-search {
+      margin-left: 20px;
+    }
+  }
+
+  nav.navbar {
+    a.navbar-brand {
+      @include lg {
+        max-width: 180px;
+      }
+      @include md {
+        max-width: 150px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    button.navbar-toggler .fa-bars {
+      color: $color-orange-1;
+    }
+
+    .collapse ul.navbar-nav {
+      margin-right: -30px;
+      transform: translateX(-15px);
+      border-bottom: 1px solid rgba(255, 255, 255, .2);
+
+      @include md {
+        margin-top: 20px;
+        background-color: #000;
+      }
+
+      .nav-item {
+        font-size: 1rem;
+        position: relative;
+
+        &__dropdown {
+          z-index: 1;
+          position: absolute;
+          color: #fff;
+          text-transform: uppercase;
+          width: 160px;
+          padding: 4px;
+          list-style: none;
+          opacity: 0;
+          transform: scale(1.1);
+          transition: opacity .25s, transform .25s;
+          will-change: transform opacity;
+          background: linear-gradient(to right, $color-orange-1, $color-orange-2);
+          resize: horizontal;
+          overflow: hidden;
+
+          @include md {
+            opacity: 1;
+            position: static;
+            text-align: center;
+            width: 100%;
+            transform: scale(1);
+            resize: unset;
+            background: rgba(236, 117, 50, .8);
+          }
+          
+          & > li {
+            cursor: pointer;
+            padding: 8px 12px; 
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+        }
+
+        &::after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 3px;
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          background: linear-gradient(to right, $color-orange-1, $color-orange-2);
+          box-shadow: 0 0 20px 0 $color-orange-1;
+          transition-property: width;
+          transition-duration: .25s;
+          will-change: width;
+        }
+
+        &:hover {
+          .nav-item__dropdown {
+            transform: scale(1);
+            opacity: 1;
+          }
+
+          &::after {
+            width: 100%;
+          }
+        }
+  
+        a.nav-link {
+          color: #fff;
+          white-space: nowrap;
+          text-transform: uppercase;
+          padding: 20px 24px;
+          letter-spacing: 3px;
+          font-size: 1em;
+          position: relative;
+          text-align: center;
+  
+          @include lg {
+            font-size: 0.9em;
+            padding: 20px 14px;
+            letter-spacing: 2px;
+          }
+          @include md {
+            font-size: 0.8em;
+          }
+          @include sm {
+            font-size: 0.7em;
+          }
+          @include xs {
+            font-size: 0.6em;
+          }
+        }
+      }
+    }
+  }
+}

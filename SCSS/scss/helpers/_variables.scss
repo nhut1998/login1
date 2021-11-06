@@ -1,0 +1,9 @@
+$info-tablet-horizontal: "only screen and (max-width : 1160px)";
+$info-tablet-vertical: "only screen and (max-width : 900px)";
+$info-phone: "only screen and (max-width : 767px)";
+$info-phone-4: "only screen and (max-width : 320px)";
+
+$fs-default: 30px
+
+// nếu giá trị là một chuỗi (string) -> khi sử dụng cần có #{} bọc lại
+// vd: #{$info-phone}

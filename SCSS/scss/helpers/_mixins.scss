@@ -1,0 +1,26 @@
+@function return-vw($size) {
+  @return #{$size}vw;
+}
+
+@mixin middle-element ($size: 100) {
+  width: return-vw($size);
+  height: #{$size}vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin middle-var {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@function half-divide($value) {
+  @return $value / 2;
+}
+
+// $size trong ngoặc của function gọi là parameters
+// mixin là một biến (variable) hoặc một hàm (function)
